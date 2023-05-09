@@ -26,7 +26,7 @@ Selection.Font.Bold = True
 
 
 
-'Setting variabiables
+'Setting variables
 
 Cells(2, 17).Value = Cells(2, 11).Value
 Cells(3, 17).Value = Cells(2, 11).Value
