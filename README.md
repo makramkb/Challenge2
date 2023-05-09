@@ -11,6 +11,8 @@ Dim myRange As Range
 For Each ws In ThisWorkbook.Worksheets
 ws.Activate
 
+
+
 'Formating
 
 Range("K:K").NumberFormat = "0.00%"
