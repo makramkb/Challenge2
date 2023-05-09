@@ -15,6 +15,8 @@ Columns("A:Q").AutoFit
 
 'Formating
 
+Range("K:K").NumberFormat = "0.00%"
+
 Set myRange = Range("J:J")
 myRange.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, Formula1:=0
 myRange.FormatConditions(1).Interior.Color = vbRed
@@ -26,7 +28,7 @@ Selection.Font.Bold = True
 
 
 
-'Setting variables
+'Setting variabiables
 
 Cells(2, 17).Value = Cells(2, 11).Value
 Cells(3, 17).Value = Cells(2, 11).Value
@@ -57,8 +59,6 @@ For i = 2 To Last_Row
 
 If Cells(i, 1).Value <> Cells(i + 1, 1).Value Then
 
-row_count_ticker = Cells(i, 1).Rows.Count
-
 
     Ticker = Cells(i, 1).Value
     Cells(Table_Row, 9) = Ticker
@@ -66,7 +66,7 @@ row_count_ticker = Cells(i, 1).Rows.Count
     Yearly_Change = Cells(i, 6).Value - Cells(i - 250, 3).Value
     Cells(Table_Row, 10) = Yearly_Change
 
-    Percent_Change = ((Cells(i, 6).Value - Cells(i - 250, 3).Value) / Cells(i - 250, 3).Value) * 100
+    Percent_Change = ((Cells(i, 6).Value - Cells(i - 250, 3).Value) / Cells(i - 250, 3).Value)
     Cells(Table_Row, 11) = Percent_Change
 
     Total_Vol = Total_Vol + Cells(i, 7).Value
