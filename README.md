@@ -11,7 +11,7 @@ Dim myRange As Range
 For Each ws In ThisWorkbook.Worksheets
 ws.Activate
 
-Columns("A:Q").AutoFit
+
 
 'Formating
 
@@ -26,9 +26,11 @@ myRange.FormatConditions(2).Interior.Color = vbGreen
 Range("A:Q").Select
 Selection.Font.Bold = True
 
+Columns("A:Q").AutoFit
 
 
-'Setting variabiables
+
+'Setting variables
 
 Cells(2, 17).Value = Cells(2, 11).Value
 Cells(3, 17).Value = Cells(2, 11).Value
