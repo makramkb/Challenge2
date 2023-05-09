@@ -11,11 +11,11 @@ Dim myRange As Range
 For Each ws In ThisWorkbook.Worksheets
 ws.Activate
 
-
-
 'Formating
 
 Range("K:K").NumberFormat = "0.00%"
+Cells(2, 17).NumberFormat = "0.00%"
+Cells(3, 17).NumberFormat = "0.00%"
 
 Set myRange = Range("J:J")
 myRange.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, Formula1:=0
